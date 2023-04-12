@@ -1,0 +1,149 @@
+/*tyShinkle.blog*/
+
+:root {
+    --safe-t: env(safe-area-inset-top);
+    --safe-r: env(safe-area-inset-right);
+    --safe-b: env(safe-area-inset-bottom);
+    --safe-l: env(safe-area-inset-left);
+    --font-color: #dcdcdc;
+    --body-bg: #181818;
+    --head-bg: #282828;
+    --content-bg: #505050;
+    --highlight: #aaa;
+    --shadow: black;
+    --keyword-color: #ff79c6;
+    --function-color: #50fa7b;
+    --variable-color: #bd93f9;
+    --bracket-color: #fff;
+    --data-color: #fafa8c;
+    --tag-color: #8be9fd;
+    --punctuation-color: #fff;
+    --text-html-color: #fff;
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: auto;
+    padding: var(--safe-t) var(--safe-r) var(--safe-b) var(--safe-l);
+    max-width: 50em;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    background-color: var(--body-bg);
+    color: var(--font-color);
+    letter-spacing: 1px;
+}
+
+nav {
+    margin: 25px 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.postTitleContainer {
+    padding: 20px 10px;
+}
+
+.post {
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.postTitle {
+    cursor: pointer;
+}
+
+.postTitle > * {
+    padding: 5px 0px;
+}
+
+.postTag{
+    display:inline;
+}
+
+.tagMargin {
+    margin-right: 15px;
+}
+
+.postContentContainer {
+    padding: 10px 10px 20px 10px;
+}
+
+.postContent {
+    padding: 15px 15px 0px 15px;
+    line-height: 1.4em;
+    background-color: var(--content-bg);
+    border-radius: 5px;
+}
+
+.postContent > * {
+    padding-bottom: 15px;
+}
+
+.raised {
+    width: fit-content;
+    padding: 15px;
+    background-color: var(--head-bg);
+    border-radius: 5px;
+    box-shadow: -1px -1px 0px var(--highlight),
+                1px 1px 1px var(--shadow),
+                2px 2px 2px var(--shadow),
+                3px 3px 6px var(--shadow),
+                0px 0px 2px var(--shadow);
+}
+
+.depressed {
+    box-shadow: inset -1px -1px 0px var(--highlight),
+                inset 2px 2px 2px var(--shadow),
+                inset 3px 3px 6px var(--shadow),
+                inset 0px 0px 2px var(--shadow);
+}
+
+/*code styles*/
+.codeBody {
+    padding: 10px;
+    max-width: fit-content;
+    background-color: var(--body-bg);
+    border-radius: 5px;
+}
+
+.keyword {
+    color: var(--keyword-color);
+}
+
+.function {
+    color: var(--function-color);
+}
+
+.variable {
+    color: var(--variable-color);
+}
+
+.bracket {
+    color: var(--bracket-color);
+}
+
+.data {
+    color: var(--data-color);
+}
+
+.tag{
+    color: var(--tag-color);
+}
+
+.text-html {
+    color: var(--text-html-color);
+}
+
+.indentation{
+    display: inline-block;
+    width: 20px;
+    min-width: 20px;
+}
