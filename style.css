@@ -47,6 +47,10 @@ nav {
     font-weight: bold;
 }
 
+#navTitle {
+    cursor: pointer;
+}
+
 .postTitleContainer {
     padding: 20px 10px;
 }
