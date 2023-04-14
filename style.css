@@ -31,9 +31,9 @@ html {
 }
 
 body {
+    max-width: 50em;
     margin: auto;
     padding: var(--safe-t) var(--safe-r) var(--safe-b) var(--safe-l);
-    max-width: 50em;
     font-family: 'Roboto';
     font-size: 1rem;
     background-color: var(--body-bg);
@@ -106,11 +106,13 @@ nav {
 svg {
     background-color: var(--head-bg);
 }
+
 .postTitleContainer {
     padding: 20px 10px;
 }
 
 .post {
+    max-width: 100%;
     overflow: hidden;
     transition: max-height 0.5s;
     padding: 0px 10px;
@@ -125,7 +127,8 @@ svg {
 }
 
 .postTag{
-    display:inline;
+    display:inline-block;
+    padding: 5px 0px;
 }
 
 .tagMargin {
