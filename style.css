@@ -54,14 +54,20 @@ nav {
 }
 
 #navButton {
-    display: inline-block;
+    height: 40px;
+    width: 40px;
     position: absolute;
     top: 50%;
     right: 0px;
     transform: translate3d(0, -50%, 0);
-    padding: 20px 15px;
-    line-height: 0;
     cursor: pointer;
+}
+
+#navButtonText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
 }
 
 .postTitleContainer {
