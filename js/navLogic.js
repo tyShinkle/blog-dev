@@ -4,15 +4,14 @@ let navTitle = document.querySelector("#navTitle");
 let navButton = document.querySelector("#navButton");
 let navButtonText = document.querySelector("#navButtonText");
 let navMenu = document.querySelector("#navMenu");
-let searchBar = document.querySelector("#searchBar");
+let searchBar;
 
 
 export let empowerNav = function() {
     nav.style.maxHeight = navHeader.offsetHeight + "px";
+    buildMenu();
     navTitle.addEventListener("click", goHome, false);
     navButton.addEventListener("click", toggleNav, false);
-    searchBar.addEventListener("focusin", activeSearch, false);
-    searchBar.addEventListener("focusout", inactiveSearch, false );
     navButton.pressed = false;
 }
 
@@ -42,4 +41,14 @@ function activeSearch(){
 
 function inactiveSearch(){
     searchBar.classList.remove("depressed");
+}
+
+function buildMenu() {
+    searchBar = document.createElement("input");
+    searchBar.classList.add("raised");
+    searchBar.addEventListener("focusin", activeSearch, false);
+    searchBar.addEventListener("focusout", inactiveSearch, false);
+    searchBar.setAttribute("id", "searchBar");
+    searchBar.placeholder = "Search...";
+    navMenu.appendChild(searchBar);
 }
