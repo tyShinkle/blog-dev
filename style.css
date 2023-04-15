@@ -89,7 +89,7 @@ nav {
 #searchBar {
     width: 100%;
     max-width: 15em;
-    padding: 15px 15px 15px calc(15px + 2em);
+    padding: 15px 15px 15px calc(20px + 2em);
     background-image: url(./icons/search.svg);
     background-repeat: no-repeat;
     background-position: 15px;
